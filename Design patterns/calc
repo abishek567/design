@@ -1,0 +1,86 @@
+package mypro;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class Main {
+	public static void main(String[] args){
+		List<Integer> list = new ArrayList<Integer>();
+		try{
+		System.out.println("EnTER TWO NUMBERS TO BE CALCULATED");
+		Scanner scanner = new Scanner(System.in);
+		int f = scanner.nextInt();
+		list.add(f);
+		int s = scanner.nextInt();
+		list.add(s);
+		Calculator calc = new Calculator(list.get(0), list.get(1));
+		calc.perform();
+		}
+		catch (Exception e) {
+			System.out.println("Enter a valid number");
+		}
+	}
+}
+class Calculator{
+	
+	Calculator Calculator = null;
+	Scanner scanner;
+	int firstnum ;
+	int secondnum;
+	public Calculator(int FN, int SN) { 
+		this.firstnum = FN;
+		this.secondnum = SN;
+		}
+//	public void setNUM(int n){
+//			 list.add(n);
+//		}
+//	public int getNUM(){
+//		return list.indexOf(null);
+//	}
+	public Calculator perform() {
+		System.out.println("What action do you wanna perform?");
+		System.out.println("1 for Addition, 2 for Subraction, 3 for Multiplication, 4 for Division");
+		 scanner = new Scanner(System.in);
+		 int action = scanner.nextInt();
+		 if (action == 1){
+			 return Add();
+		 }
+		 else if(action == 2){
+			 return Subract();
+		 }
+		 else if(action == 3){
+			 return Multiply();
+		 }
+		 else if(action == 4){
+			 return Divide();
+		 }
+		return Calculator;
+    } 
+
+	public Calculator Add(){
+		int result = firstnum + secondnum;
+		System.out.println("result :"+ result);
+		return Calculator;
+	}
+	public Calculator Subract(){
+		int result = firstnum - secondnum;
+		System.out.println("result :"+ result);
+		return Calculator;
+	}
+	public Calculator Multiply(){
+		int result = firstnum * secondnum;
+		System.out.println("result :"+ result);
+		return Calculator;
+	}
+	public Calculator Divide(){
+		int result = firstnum / secondnum;
+		System.out.println("result :"+ result);
+		return Calculator;
+	}
+}
+
+
