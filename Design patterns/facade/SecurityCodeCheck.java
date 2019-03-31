@@ -4,13 +4,12 @@ public class SecurityCodeCheck
 {
 	 private int securutyCode = 1234;
 	    
-	    public int getSecurityCOde()  
+	    public int getSecurityCode()  
 	    {
 	    	return securutyCode; 
 	    }
-
 		public boolean isCodeCorrect(int securityCode) {
-			if(securityCode == getSecurityCOde()) {
+			if(securityCode == getSecurityCode()) {
 
 				return true;}
 				else 
