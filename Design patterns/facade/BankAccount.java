@@ -41,14 +41,11 @@ public class BankAccount
 
 		if (acctChecker.accountActive(accountNumber)&&
 				codeChecker.isCodeCorrect(securutyCode)&&
-				fundsChecker.haveEnoughMoney(cashToDeposit))
+				fundsChecker.cashDeposit(cashToDeposit))
 		{
+			
 			System.out.println("transaction complete\n");
 		}
 	}
 }
-
-
-
-
 
