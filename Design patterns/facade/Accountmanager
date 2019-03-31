@@ -13,7 +13,7 @@ public class AccountManager{
 	
 	public AccountManager(){
 		
-	account = new BankAccount(12345, 1234);
+		 account = new BankAccount(12345, 1234);
         System.out.println("What action do you wanna perform;");
         System.out.println("1 for withdrawing money /n 2 for depositing money");
         Scanner scanner = new Scanner(System.in);
