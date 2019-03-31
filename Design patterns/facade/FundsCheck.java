@@ -8,10 +8,15 @@ public class FundsCheck
     { 
     	return cashInAccount;
     }
-    public void decreaseCash(double cashWithdrawn)
+    public boolean cashDeposit(double cashdep)
     {
-    	cashInAccount -= cashWithdrawn;
+    	cashInAccount += cashdep; 
+    	System.out.println("Deposit complete; current balance ;" +  cashInAccount);
+        return true;
     }
+    
+    public void cashDeduction(double cashWithdrawn)
+    {cashInAccount -= cashWithdrawn; }
     
     public boolean haveEnoughMoney(double cashToWithdrawl)
     {
@@ -22,11 +27,10 @@ public class FundsCheck
     	}
     	else
     	{
-    		decreaseCash(cashToWithdrawl);
+    		cashDeduction(cashToWithdrawl);
     		System.out.println("withdrawal complete;current balance " + cashInAccount);
     		return true;
     	}
     }
     
 }
-
